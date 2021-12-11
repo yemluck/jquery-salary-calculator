@@ -11,7 +11,57 @@
 </head>
 <body>
     <h1>Salary Calculator</h1>
-
+    <h2> Add Employee</h2>
+    <form>
+        <input id="fName" type="text" placeholder="First Name" />
+        <input id="lName" type="text" placeholder="Last Name" />
+        <input id="id" type="number" placeholder="ID" />
+        <select id="title">
+            <option>Site Engineer</option>
+            <option>Architect</option>
+            <option>Civil Engineer I</option>
+            <option>Civil Engineer II</option>
+            <option>Quantity Surveyor</option>
+            <option>Project Manager</option>
+        </select>
+        <input id="annualSalary" type="number" placeholder="Annual Salary" />
+        <input id="submitButton" type="submit" value="Submit" />
+    </form>
+    <div>
+        <h2>Employees</h2>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th> First Name</th>
+                    <th> Last Name</th>
+                    <th> ID</th>
+                    <th> Title</th>
+                    <th> Annual Salary</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                   <td> Jen</td>
+                   <td> Barber</td>
+                   <td> ID</td>
+                   <td> Site Engineer</td>
+                   <td> 80000</td>
+                   <td> <button class="deleteButton"> Delete</button> </td>
+               </tr>
+               <tr>
+                    <td> Jen</td>
+                    <td> Barber</td>
+                    <td> ID</td>
+                    <td> Site Engineer</td>
+                    <td> 23500</td>
+                    <td> <button class="deleteButton"> Delete</button> </td>
+               </tr>
+            </tbody>
+        </table>
+    </div>
 
 
 
