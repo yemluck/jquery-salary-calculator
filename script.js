@@ -43,6 +43,9 @@ function deleteEmployee() {
     $(this).parents('tr').remove();
     // delete record from global variable employeeList
     employeeList.splice($(this),1); // proud of myself. hehe
+    // hehe, not so proud after finding the bug
+    // I'm thinking it is the $(this) sythax that is messing it up
+    // never trust the computer. Almost didn't catch the bug
 } // end function deleteEmployee
 
 
