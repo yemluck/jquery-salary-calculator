@@ -22,6 +22,7 @@ function onReady(){
 function deleteEmployee() {
     console.log('in deleteEmployee');
     $(this).parents('tr').remove();
+    employeeList.splice($(this),1); // proud of myself. hehe
 } // end function deleteEmployee
 
 
