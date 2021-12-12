@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Salary Calculator</title>
 </head>
 <body>
     <h1>Salary Calculator</h1>
     <h2> Add Employee</h2>
-    <form>
+    <form id="salaryForm"> 
         <input id="fName" type="text" placeholder="First Name" />
         <input id="lName" type="text" placeholder="Last Name" />
         <input id="id" type="number" placeholder="ID" />
@@ -30,7 +32,7 @@
     <div>
         <h2>Employees</h2>
     </div>
-    <div class="table">
+    <div class="table table-striped">
         <table>
             <thead>
                 <tr>
@@ -61,6 +63,9 @@
                </tr>
             </tbody>
         </table>
+        <p id="total">
+            Total Montly Salary: $________
+        </p>
     </div>
 
 
