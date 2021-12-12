@@ -20,8 +20,9 @@ function onReady(){
 } // end function onReady
 
 function deleteEmployee() {
-    console.log('in deleteEmployee');
+    //console.log('in deleteEmployee');
     $(this).parents('tr').remove();
+    // delete record from global variable employeeList
     employeeList.splice($(this),1); // proud of myself. hehe
 } // end function deleteEmployee
 

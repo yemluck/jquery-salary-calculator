@@ -15,9 +15,9 @@
     <h1>Salary Calculator</h1>
     <h2> Add Employee</h2>
     <form id="salaryForm"> 
-        <input id="fName" type="text" placeholder="First Name" />
-        <input id="lName" type="text" placeholder="Last Name" />
-        <input id="id" type="number" step="any" placeholder="ID" />
+        <input id="fName" type="text" placeholder="First Name" required/>
+        <input id="lName" type="text" placeholder="Last Name" required/>
+        <input id="id" type="number" step="any" placeholder="ID" required min="0"/>
         <select id="title">
             <option>Site Engineer</option>
             <option>Architect</option>
@@ -26,7 +26,7 @@
             <option>Quantity Surveyor</option>
             <option>Project Manager</option>
         </select>
-        <input id="annualSalary" type="number" placeholder="Annual Salary" />
+        <input id="annualSalary" type="number" placeholder="Annual Salary" required/>
         <input id="submitButton" type="submit" value="Submit" />
     </form>
     <div>
@@ -55,8 +55,8 @@
                </tr>
             </tbody>
         </table>
-        <p id="total">
-            Total Montly Salary: $________
+        <p >
+            Total Montly Salary: $<span id="total"></span>
         </p>
     </div>
 
