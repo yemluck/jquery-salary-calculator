@@ -11,13 +11,28 @@ function onReady(){
 
     // handle submit button
     $('#salaryForm').on('submit', recordSalary);
+    $('#salaryForm').on('submit', totalSalary);
+    
 
     // handle delete button
     //$('.deleteButton').on('click', deleteEmployee)
     $(document).on('click', '.deleteButton', deleteEmployee);
+    $(document).on('click', '.deleteButton', totalSalary);
 
 
 } // end function onReady
+
+function totalSalary() {
+    console.log('in function totalSalary');
+    let sum = 0;
+    for (let i = 0; i < employeeList.length; i++){
+        sum += employeeList[i].annualSalary
+    }
+    console.log('total sum is', sum)
+    $('#total').text('')
+    $('#total').append(`${sum}`)
+    
+} // end function totalSalary
 
 function deleteEmployee() {
     //console.log('in deleteEmployee');
