@@ -11,6 +11,8 @@ function onReady(){
 
     // handle submit button
     $('#salaryForm').on('submit', recordSalary);
+    // You want the total salary to run on both addition
+    // of staff and removal of staff
     $('#salaryForm').on('submit', totalSalary);
     
 
@@ -29,8 +31,10 @@ function totalSalary() {
         sum += employeeList[i].annualSalary
     }
     console.log('total sum is', sum)
+    // make sure to empty the spot
     $('#total').text('')
-    $('#total').append(`${sum}`)
+    // append to the empty slot
+    $('#total').append(sum)
     
 } // end function totalSalary
 
@@ -89,5 +93,9 @@ function recordSalary(event){
             </tr>
         `)
     }
+    $('#fName').val('');
+    $('#lName').val('');
+    $('#id').val('');
+    $('#annualSalary').val('');
     
 } // end function recordSalary
