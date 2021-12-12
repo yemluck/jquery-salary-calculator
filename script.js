@@ -9,8 +9,23 @@ let employeeList = []
 function onReady(){
     //console.log('in onReady');
 
-    $('#salaryForm').on('submit', recordSalary)
+    // handle submit button
+    $('#salaryForm').on('submit', recordSalary);
+
+    // handle delete button
+    //$('.deleteButton').on('click', deleteEmployee)
+    $(document).on('click', '.deleteButton', deleteEmployee);
+
+
 } // end function onReady
+
+function deleteEmployee() {
+    console.log('in deleteEmployee');
+    $(this).parents('tr').remove();
+} // end function deleteEmployee
+
+
+
 
 function recordSalary(event){
     // Prevent form from causing app to reload
