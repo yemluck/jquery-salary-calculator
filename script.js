@@ -10,7 +10,7 @@ function onReady(){
     //console.log('in onReady');
 
     $('#salaryForm').on('submit', recordSalary)
-}
+} // end function onReady
 
 function recordSalary(event){
     // Prevent form from causing app to reload
@@ -31,11 +31,31 @@ function recordSalary(event){
         id: id,
         title: title,
         annualSalary: annualSalary
-    };
+    }; // end employee object
 
     // add each employee to the employeeList
     employeeList.push(employee);
 
-    console.log('employee', employee)
+    // Empty <tbody> before rendering into it
+    $('#employeeListId').empty();
+
+    // console.log('employee', employee);
+
+    // Render the employee List
+    // Loop through employee list array
+    // Render each employee as a <tr>
+
+    for (staff of employeeList){
+        $('#employeeListId').append(`
+            <tr>
+                <td>${staff.firstName}</td>
+                <td>${staff.lastName}</td>
+                <td>${staff.id}</td>
+                <td>${staff.title}</td>
+                <td>$${staff.annualSalary}</td>
+                <td> <button class="deleteButton"> Delete</button> </td>
+            </tr>
+        `)
+    }
     
-}
+} // end function recordSalary

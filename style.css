@@ -1,5 +1,5 @@
 h1 {
-    background: grey;
+    background: black;
     text-align: center;
     text-decoration-color: white;
     color: white
@@ -11,6 +11,7 @@ p {
 
 body {
     margin: 30px 60px 30px;
+    background: lightgray;
 }
 
 h2 {
