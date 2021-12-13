@@ -34,7 +34,17 @@ function totalSalary() {
     // make sure to empty the spot
     $('#total').text('')
     // append to the empty slot
-    $('#total').append(Math.round(sum/12))
+
+    let totalMonthly = Math.round(sum / 12);
+    $('#total').append(totalMonthly)
+
+    // Add a red background color, if total is more than $20,000
+    if (totalMonthly > 20000) {
+        $('#total').css('background', 'red');
+    }
+        // or better yet, use a CSS class to style the element
+       // $('#total').addClass('overBudget');
+ 
     
 } // end function totalSalary
 
