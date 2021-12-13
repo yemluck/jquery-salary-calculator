@@ -34,7 +34,7 @@ function totalSalary() {
     // make sure to empty the spot
     $('#total').text('')
     // append to the empty slot
-    $('#total').append(sum)
+    $('#total').append(Math.round(sum/12))
     
 } // end function totalSalary
 
